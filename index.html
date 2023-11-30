@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Register Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <div class="container-logo">
+    <div class="logo">
+      <img src="logoMANLABapp.png">
+    </div>
+  </div>
+
+  <div class="login">
+    <div id="loginSection">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="password" placeholder="Password" required>
+        <input type="submit" value="Login" class="button">
+      </form>
+      <p id="toggleText">Don't have an account? <a href="#" id="switchToRegister">Register</a></p>
+    </div>
+  
+    <div id="registerSection" style="display: none;">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Repeat Password" required>
+        <input type="submit" value="Register" class="button">
+      </form>
+      <p id="switchToLoginText">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

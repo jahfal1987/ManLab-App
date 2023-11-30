@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Pimpinan Fakultas</title>
+  <link rel="stylesheet" type="text/css" href="styledashboardpimpinan.css">
+  <script src="scriptpimpinan.js"></script>
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <img src="logoMANLABapp.png">
+    </div>
+    <div class="pengguna">
+      <h1>Pimpinan Fakultas</h1>
+    </div>
+    <ul>
+      <li><a href="#laporan">Laporan</a></li>
+    </ul>
+    <div class="logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="content">
+      <div id="laporan" class="tab-content">
+        <h2>Laporan</h2>
+        <div id="daftar-laporan">
+          <h3>Daftar Laporan</h3>
+          <ul>
+            <li><a href="#daftarPeralatannLab" onclick="showEquipmentReport()">Laporan Daftar Peralatan</a></li>
+            <li><a href="#daftarPenggunaanLab" onclick="showRoomUsageReport()">Laporan Penggunaan Ruangan</a></li>
+          </ul>
+        </div>
+        <div id="daftarPeralatannLab" style="display: none;">
+          <h2>Laporan Penggunaan Peralatan Lab</h2>
+          <table>
+            <!-- Tabel daftar peralatan -->
+            <tr>
+              <th>Barang</th>
+              <th>Merek</th>
+              <th>Nomor Seri</th>
+              <th>Jumlah</th>
+              <th>Status</th>
+              <th>Kondisi</th>
+            </tr>
+            <tr>
+              <td>Laptop</td>
+              <td>Asus</td>
+              <td>G531GT-12345</td>
+              <td>3</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+            <tr>
+              <td>Proyektor</td>
+              <td>Epson</td>
+              <td>T-988</td>
+              <td>2</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+            <tr>
+              <td>Kabel HDMI</td>
+              <td>-</td>
+              <td>-</td>
+              <td>10</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+          </table>
+          <button class="btn-cetak" onclick="cetakLaporan()">Cetak Laporan</button>
+        </div>
+        <div id="daftarPenggunaanLab" style="display: none;">
+          <h2>Laporan Penggunaan Ruangan Lab</h2>
+          <table>
+            <tr>
+              <th>Tanggal Pinjam</th>
+              <th>Waktu Mulai</th>
+              <th>Waktu Selesai</th>
+              <th>Keperluan</th>
+              <th>Jumlah Orang</th>
+            </tr>
+            <tr>
+              <td>12/05/2023</td>
+              <td>08:00</td>
+              <td>10:00</td>
+              <td>Praktikum Algoritma</td>
+              <td>30</td>
+            </tr>
+            <!-- tambahkan jadwal penggunaan lab lain di sini -->
+          </table>
+          <button class="btn-cetak" onclick="printReports()">Cetak Laporan</button>
+        </div>
+      </div>
+      
+
+  </div>
+</body>
+</html>

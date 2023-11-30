@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.navigation {
+  background-color: #f0f0f0;
+  padding: 10px;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  margin-bottom: 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px;
+}
+
+.pengguna{
+  margin-left: 5px;
+}
+
+.content {
+  margin-left: 150px;
+  padding: 150px;
+}
+
+.tab-content {
+  display: none;
+}
+
+#pinjam-peralatan form {
+  margin-bottom: 20px; /* Memberikan spasi bawah sebesar 20 piksel */
+}
+
+#pinjam-peralatan label,
+#pinjam-peralatan input,
+#pinjam-peralatan select {
+  margin-bottom: 10px; /* Memberikan spasi bawah sebesar 10 piksel */
+}
+
+#pinjam-lab form {
+  margin-bottom: 20px; /* Memberikan spasi bawah sebesar 20 piksel */
+}
+
+#pinjam-lab label,
+#pinjam-lab input,
+#pinjam-lab select {
+  margin-bottom: 10px; /* Memberikan spasi bawah sebesar 10 piksel */
+}
+
+/* CSS for Riwayat Peminjaman Peralatan */
+#riwayatPeminjamanPeralatan {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#riwayatPeminjamanPeralatan th,
+#riwayatPeminjamanPeralatan td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#riwayatPeminjamanPeralatan th {
+  background-color: #f2f2f2;
+}
+
+/* CSS for Riwayat Peminjaman Ruangan */
+#riwayatPeminjamanRuangan {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#riwayatPeminjamanRuangan th,
+#riwayatPeminjamanRuangan td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#riwayatPeminjamanRuangan th {
+  background-color: #f2f2f2;
+}
+
+.logout {
+  margin-top: 275px;
+  text-align: left;
+}
+
+.logout button {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout button:hover {
+  background-color: #e60000;
+}
+
+
+/* CSS for Terima, Tolak, Ajukan Ulang */
+.button {
+  margin-top: 10px;
+}
+
+.accept {
+  color: green;
+}
+
+.reject {
+  color: red;
+}
+
+.resubmit {
+  color: blue;
+}
+
+
+.content .active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}

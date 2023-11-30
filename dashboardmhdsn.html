@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Pengguna</title>
+  <link rel="stylesheet" type="text/css" href="styledashboardmhdsn.css">
+  <script src="scriptmhdsn.js"></script>
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <img src="logoMANLABapp.png">
+    </div>
+    <div class="pengguna">
+      <h1>Mahasiswa</h1>
+    </div>
+    <ul>
+      <li><a href="#pinjam-peralatan">Pinjam Peralatan</a></li>
+      <li><a href="#daftar-peralatan">Daftar Peralatan</a></li>
+      <li><a href="#pinjam-lab">Pinjam Lab</a></li>
+      <li><a href="#jadwal-penggunaan-lab">Jadwal Penggunaan Lab</a></li>
+    </ul>
+    <div class="logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="pinjam-peralatan" class="tab-content">
+      <h2>Pinjam Peralatan</h2>
+      <!-- Form pinjam peralatan -->
+      <form id="pinjamPeralatanForm">
+        <label for="barang">Barang yang akan dipinjam:</label>
+        <select id="barang" name="barang">
+          <option value="laptop">Laptop</option>
+          <option value="proyektor">Proyektor</option>
+          <option value="kabel">Kabel</option>
+          <!-- tambahkan pilihan barang yang lain di sini -->
+        </select>
+        <br>
+        <label for="tanggalAmbil">Tanggal Ambil:</label>
+        <input type="date" id="tanggalAmbil" name="tanggalAmbil">
+        <br>
+        <label for="tanggalKembali">Tanggal Kembali:</label>
+        <input type="date" id="tanggalKembali" name="tanggalKembali">
+        <br>
+        <button type="submit" class="button">Ajukan</button>
+      </form>
+
+      <!-- Riwayat Peminjaman Peralatan -->
+      <h3>Riwayat Peminjaman Peralatan</h3>
+      <table id="riwayatPeminjamanPeralatan">
+        <tr>
+          <th>Barang</th>
+          <th>Tanggal Ambil</th>
+          <th>Tanggal Kembali</th>
+          <th>Status</th>
+          <th>Keterangan</th>
+        </tr>
+        <tr>
+          <td>Laptop</td>
+          <td>01/05/2023</td>
+          <td>03/05/2023</td>
+          <td>Ditolak</td>
+          <td>Tidak tersedia saat ini</td>
+        </tr>
+        <!-- tambahkan riwayat peminjaman peralatan lain di sini -->
+      </table>
+    </div>
+
+    <div id="daftar-peralatan" class="tab-content">
+      <h2>Daftar Peralatan</h2>
+      <table id="daftarPeralatanLab">
+        <!-- Tabel daftar peralatan -->
+        <tr>
+          <th>Barang</th>
+          <th>Merek</th>
+          <th>Nomor Seri</th>
+          <th>Jumlah</th>
+          <th>Status</th>
+          <th>Kondisi</th>
+        </tr>
+        <tr>
+          <td>Laptop</td>
+          <td>Asus</td>
+          <td>G531GT-12345</td>
+          <td>3</td>
+          <td>Tersedia</td>
+          <td>Baik</td>
+        </tr>
+        <tr>
+          <td>Proyektor</td>
+          <td>Epson</td>
+          <td>T-988</td>
+          <td>2</td>
+          <td>Tersedia</td>
+          <td>Baik</td>
+        </tr>
+        <tr>
+          <td>Kabel HDMI</td>
+          <td>-</td>
+          <td>-</td>
+          <td>10</td>
+          <td>Tersedia</td>
+          <td>Baik</td>
+        </tr>
+      </table>
+    </div>
+  
+    <div id="pinjam-lab" class="tab-content">
+      <h2>Pinjam Lab</h2>
+      <!-- Form pinjam lab -->
+      <form id="pinjamLabForm">
+        <label for="tanggalPinjam">Tanggal Pinjam:</label>
+        <input type="date" id="tanggalPinjam" name="tanggalPinjam">
+        <br>
+        <label for="waktuMulai">Waktu Mulai:</label>
+        <input type="time" id="waktuMulai" name="waktuMulai">
+        <br>
+        <label for="waktuSelesai">WaktuSelesai:</label>
+        <input type="time" id="waktuSelesai" name="waktuSelesai">
+        <br>
+        <label for="keperluan">Keperluan:</label>
+        <input type="text" id="keperluan" name="keperluan">
+        <br>
+        <label for="jumlahOrang">Jumlah Orang:</label>
+        <input type="number" id="jumlahOrang" name="jumlahOrang">
+        <br>
+        <button type="submit" class="button">Ajukan</button>
+      </form>
+  
+      <!-- Riwayat Peminjaman Ruangan -->
+      <h3>Riwayat Peminjaman Ruangan</h3>
+      <table id="riwayatPeminjamanRuangan">
+        <tr>
+          <th>Tanggal Pinjam</th>
+          <th>Waktu Mulai</th>
+          <th>Waktu Selesai</th>
+          <th>Keperluan</th>
+          <th>Jumlah Orang</th>
+          <th>Status</th>
+          <th>Keterangan</th>
+        </tr>
+        <tr>
+          <td>05/05/2023</td>
+          <td>08:00</td>
+          <td>10:00</td>
+          <td>Praktikum Algoritma</td>
+          <td>30</td>
+          <td>Terima</td>
+          <td>-</td>
+        </tr>
+        <!-- tambahkan riwayat peminjaman ruangan lain di sini -->
+      </table>
+    </div>
+
+    <div id="jadwal-penggunaan-lab" class="tab-content">
+      <h2>Jadwal Penggunaan Lab</h2>
+        <!-- Tabel jadwal penggunaan lab -->
+        <table id="jadwalPenggunaanLab">
+          <tr>
+            <th>Tanggal Pinjam</th>
+            <th>Waktu Mulai</th>
+            <th>Waktu Selesai</th>
+            <th>Keperluan</th>
+            <th>Jumlah Orang</th>
+          </tr>
+          <tr>
+            <td>12/05/2023</td>
+            <td>08:00</td>
+            <td>10:00</td>
+            <td>Praktikum Algoritma</td>
+            <td>30</td>
+          </tr>
+          <!-- tambahkan jadwal penggunaan lab lain di sini -->
+        </table>
+    </div>
+  </div>
+</body>
+</html>
+
+  

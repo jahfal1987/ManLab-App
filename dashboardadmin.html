@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" type="text/css" href="styledashboardadmin.css">
+  <script src="scirptadmin.js"></script>
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <img src="logoMANLABapp.png">
+    </div>
+    <div class="pengguna">
+      <h1>Admin</h1>
+    </div>
+    <ul>
+      <li><a href="#kelola-peralatan">Kelola Peralatan</a></li>
+      <li><a href="#kelola-ruangan">Kelola Ruangan</a></li>
+      <li><a href="#laporan">Laporan</a></li>
+    </ul>
+    <div class="logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="kelola-peralatan" class="tab-content">
+        <h2>Daftar Peralatan</h2>
+        <table id="daftarPeralatanLab">
+          <!-- Tabel daftar peralatan -->
+          <tr>
+            <th>Barang</th>
+            <th>Merek</th>
+            <th>Nomor Seri</th>
+            <th>Jumlah</th>
+            <th>Status</th>
+            <th>Kondisi</th>
+            <th>Aksi</th>
+          </tr>
+          <tr>
+            <td>Laptop</td>
+            <td>Asus</td>
+            <td>G531GT-12345</td>
+            <td>3</td>
+            <td>Tersedia</td>
+            <td>Baik</td>
+            <td>
+              <button class="btn-edit" onclick="editRow(this)">Edit</button>
+              <button class="btn-hapus" onclick="hapusRow(this)">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Proyektor</td>
+            <td>Epson</td>
+            <td>T-988</td>
+            <td>2</td>
+            <td>Tersedia</td>
+            <td>Baik</td>
+            <td>
+              <button class="btn-edit" onclick="editRow(this)">Edit</button>
+              <button class="btn-hapus" onclick="hapusRow(this)">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Kabel HDMI</td>
+            <td>-</td>
+            <td>-</td>
+            <td>10</td>
+            <td>Tersedia</td>
+            <td>Baik</td>
+            <td>
+              <button class="btn-edit" onclick="editRow(this)">Edit</button>
+              <button class="btn-hapus" onclick="hapusRow(this)">Hapus</button>
+            </td>
+          </tr>
+        </table>
+        
+        <div class="button-container">
+          <button class="btn-tambah" onclick="tambahPeralatan()">Tambah Peralatan</button>
+        </div>
+
+        <h2>Daftar Pengajuan Peminjaman Peralatan</h2>
+    <table id="daftarPengajuanPinjamPeralatan">
+    <!-- Tabel daftar pengajuan peminjaman peralatan -->
+    <tr>
+      <th>Barang</th>
+      <th>Tanggal Ambil</th>
+      <th>Tanggal Kembali</th>
+      <th>Aksi</th>
+      <th>Keterangan</th>
+    </tr>
+    <tr>
+      <td>Laptop</td>
+      <td>12/05/2023</td>
+      <td>14/05/2023</td>
+      <td>
+        <select class="pilihan-select">
+          <option value="terima">Terima</option>
+          <option value="tolak">Tolak</option>
+          <option value="ajukanUlang">Ajukan Ulang</option>
+        </select>
+      </td>
+      <td><input type="text" class="keterangan-input" placeholder="Keterangan"></td>
+      <td><button class="btn-simpan">Simpan</button></td>
+      </tr>
+      <tr>
+      <td>Proyektor</td>
+      <td>13/05/2023</td>
+      <td>15/05/2023</td>
+      <td>
+      <select class="pilihan-select">
+      <option value="terima">Terima</option>
+      <option value="tolak">Tolak</option>
+      <option value="ajukanUlang">Ajukan Ulang</option>
+      </select>
+      </td>
+      <td><input type="text" class="keterangan-input" placeholder="Keterangan"></td>
+      <td><button class="btn-simpan">Simpan</button></td>
+      </tr>
+        </table>
+      </div>
+      
+      <div id="kelola-ruangan" class="tab-content">
+        <h2>Pengajuan Peminjaman Ruangan</h2>
+        <table id="daftarPengajuanPinjamLab">
+          <!-- Tabel daftar pengajuan -->
+          <tr>
+            <th>Tanggal Pinjam</th>
+            <th>Waktu Mulai</th>
+            <th>Waktu Selesai</th>
+            <th>Keperluan</th>
+            <th>Jumlah Orang</th>
+            <th>Aksi</th>
+            <th>Keterangan</th>
+          </tr>
+          <tr>
+            <td>12/05/2023</td>
+            <td>08.00</td>
+            <td>10.00</td>
+            <td>Skripsi</td>
+            <td>10</td>
+            <td>
+              <select class="pilihan-select">
+                <option value="terima">Terima</option>
+                <option value="tolak">Tolak</option>
+                <option value="ajukanUlang">Ajukan Ulang</option>
+              </select>
+            </td>
+            <td><input type="text" class="keterangan-input" placeholder="Keterangan"></td>
+            <td><button class="btn-simpan">Simpan</button></td>
+          </tr>
+          <tr>
+            <td>12/05/2023</td>
+            <td>09.00</td>
+            <td>11.00</td>
+            <td>Praktikum RPL</td>
+            <td>30</td>
+            <td>
+              <select class="pilihan-select">
+                <option value="terima">Terima</option>
+                <option value="tolak">Tolak</option>
+                <option value="ajukanUlang">Ajukan Ulang</option>
+              </select>
+            </td>
+            <td><input type="text" class="keterangan-input" placeholder="Keterangan"></td>
+            <td><button class="btn-simpan">Simpan</button></td>
+          </tr>
+          <tr>
+            <td>12/05/2023</td>
+            <td>12.00</td>
+            <td>14.00</td>
+            <td>Seminar</td>
+            <td>30</td>
+            <td>
+              <select class="pilihan-select">
+                <option value="terima">Terima</option>
+                <option value="tolak">Tolak</option>
+                <option value="ajukanUlang">Ajukan Ulang</option>
+              </select>
+            </td>
+            <td><input type="text" class="keterangan-input" placeholder="Keterangan"></td>
+            <td><button class="btn-simpan">Simpan</button></td>
+          </tr>
+        </table>
+
+        <h2>Jadwal Penggunaan Lab</h2>
+        <!-- Tabel jadwal penggunaan lab -->
+        <table id="jadwalPenggunaanLab">
+          <tr>
+            <th>Tanggal Pinjam</th>
+            <th>Waktu Mulai</th>
+            <th>Waktu Selesai</th>
+            <th>Keperluan</th>
+            <th>Jumlah Orang</th>
+          </tr>
+          <tr>
+            <td>12/05/2023</td>
+            <td>08:00</td>
+            <td>10:00</td>
+            <td>Praktikum Algoritma</td>
+            <td>30</td>
+          </tr>
+          <!-- tambahkan jadwal penggunaan lab lain di sini -->
+        </table>
+      </div>
+      
+      
+
+      <div id="laporan" class="tab-content">
+        <h2>Laporan</h2>
+        <div id="daftar-laporan">
+          <h3>Daftar Laporan</h3>
+          <ul>
+            <li><a href="#daftarPeralatannLab" onclick="showEquipmentReport()">Laporan Daftar Peralatan</a></li>
+            <li><a href="#daftarPenggunaanLab" onclick="showRoomUsageReport()">Laporan Penggunaan Ruangan</a></li>
+          </ul>
+        </div>
+        <div id="daftarPeralatannLab" style="display: none;">
+          <h2>Laporan Penggunaan Peralatan Lab</h2>
+          <table>
+            <!-- Tabel daftar peralatan -->
+            <tr>
+              <th>Barang</th>
+              <th>Merek</th>
+              <th>Nomor Seri</th>
+              <th>Jumlah</th>
+              <th>Status</th>
+              <th>Kondisi</th>
+            </tr>
+            <tr>
+              <td>Laptop</td>
+              <td>Asus</td>
+              <td>G531GT-12345</td>
+              <td>3</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+            <tr>
+              <td>Proyektor</td>
+              <td>Epson</td>
+              <td>T-988</td>
+              <td>2</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+            <tr>
+              <td>Kabel HDMI</td>
+              <td>-</td>
+              <td>-</td>
+              <td>10</td>
+              <td>Tersedia</td>
+              <td>Baik</td>
+            </tr>
+          </table>
+          <button class="btn-cetak" onclick="printReports()">Cetak Laporan</button>
+        </div>
+        <div id="daftarPenggunaanLab" style="display: none;">
+          <h2>Laporan Penggunaan Ruangan Lab</h2>
+          <table>
+            <tr>
+              <th>Tanggal Pinjam</th>
+              <th>Waktu Mulai</th>
+              <th>Waktu Selesai</th>
+              <th>Keperluan</th>
+              <th>Jumlah Orang</th>
+            </tr>
+            <tr>
+              <td>12/05/2023</td>
+              <td>08:00</td>
+              <td>10:00</td>
+              <td>Praktikum Algoritma</td>
+              <td>30</td>
+            </tr>
+            <!-- tambahkan jadwal penggunaan lab lain di sini -->
+          </table>
+          <button class="btn-cetak" onclick="printReports()">Cetak Laporan</button>
+        </div>
+      </div>
+      
+
+  </div>
+</body>
+</html>

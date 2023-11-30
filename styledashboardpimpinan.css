@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .navigation {
+    background-color: #f0f0f0;
+    padding: 10px;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation ul li {
+    margin-bottom: 10px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+  }
+  
+  .pengguna{
+    margin-left: 5px;
+  }
+  
+  .content {
+    margin-left: 150px;
+    padding: 150px;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  #kelola-peralatan form {
+    margin-bottom: 20px; /* Memberikan spasi bawah sebesar 20 piksel */
+  }
+
+  #kelola-peralatan label,
+  #kelola-peralatan input,
+  #kelola-peralatan select {
+    margin-bottom: 10px; /* Memberikan spasi bawah sebesar 10 piksel */
+  }
+
+  /* Styling for the buttons */
+.button {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-hapus {
+    background-color: #dc3545;
+    color: #fff;
+  }
+
+  .btn-tambah {
+    background-color: #28a745;
+    color: #fff;
+  }
+
+  #daftarPengajuanPinjamLab {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #daftarPengajuanPinjamLab th, #daftarPengajuanPinjamLab td {
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  #daftarPengajuanPinjamLab th {
+    background-color: #f2f2f2;
+  }
+  
+  .pilihan-select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .keterangan-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .btn-simpan {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-simpan:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-simpan:active {
+    background-color: #3e8e41;
+  }
+  
+  /* Buttons */
+.btn-cetak {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.logout {
+  margin-top: 300px;
+  text-align: left;
+}
+
+.logout button {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout button:hover {
+  background-color: #e60000;
+}
+
+  
+  .content .active {
+    display: block;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+  
